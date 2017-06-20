@@ -1,5 +1,4 @@
-﻿///Test
-///Test
+﻿///Created By Deanosim1
 using Discord;
 using Discord.Commands;
 using System;
