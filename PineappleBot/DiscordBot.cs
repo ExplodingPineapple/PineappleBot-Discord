@@ -34,7 +34,14 @@ namespace PineappleBot
 
             client.ExecuteAndWait(async () =>
             {
-                await client.Connect("INSERT BOT TOKEN HERE", TokenType.Bot);
+                try
+                {
+                    await client.Connect("INSERT BOT TOKEN HERE", TokenType.Bot);
+                }
+                catch (Discord.Net.HttpException e)
+                {
+                    Console.WriteLine("An error occured while connecting to Discord's servers:\n{0}", e.Message);
+                }
             });
         }
 
