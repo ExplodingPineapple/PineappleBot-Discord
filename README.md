@@ -1,0 +1,3 @@
+# PineappleBot-Discord
+
+In C#
