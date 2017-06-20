@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PineappleBot.net
+namespace PineappleBot
 {
     class Program
     {
         static void Main(string[] args)
         {
+            DiscordBot bot = new DiscordBot();
         }
     }
 }
