@@ -17,7 +17,7 @@ namespace PineappleBot
             client = new DiscordClient(input =>
             {
                 input.LogLevel = LogSeverity.Info;
-                input.LogHandler = Log();
+                input.LogHandler = Log;
             });
 
             client.UsingCommands(input =>
