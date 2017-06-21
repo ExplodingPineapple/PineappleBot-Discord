@@ -27,9 +27,9 @@ namespace PineappleBot
 
             commands = client.GetService<CommandService>();
 
-            commands.CreateCommand("Hello").Do(async (e) =>
+            commands.CreateCommand("Ping").Do(async (e) =>
             {
-                await e.Channel.SendMessage("World!");
+                await e.Channel.SendMessage("Pong!");
             });
 
             client.ExecuteAndWait(async () =>
