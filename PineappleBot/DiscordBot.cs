@@ -12,10 +12,11 @@ namespace PineappleBot
 
         public DiscordBot()
         {
-
+            Console.WriteLine("Starting PineappleBot...");
+            Console.WriteLine("Connecting to Discord Servers...");
             client = new DiscordClient(input =>
             {
-                input.LogLevel = LogSeverity.Info;
+                input.LogLevel = LogSeverity.Verbose;
                 input.LogHandler = Log;
             });
 
@@ -27,9 +28,9 @@ namespace PineappleBot
 
             commands = client.GetService<CommandService>();
 
-            commands.CreateCommand("Hello").Do(async (e) =>
+            commands.CreateCommand("Ping").Do(async (e) =>
             {
-                await e.Channel.SendMessage("World!");
+                await e.Channel.SendMessage("Pong!");
             });
 
             client.ExecuteAndWait(async () =>
