@@ -12,10 +12,11 @@ namespace PineappleBot
 
         public DiscordBot()
         {
-
+            Console.WriteLine("Starting PineappleBot...");
+            Console.WriteLine("Connecting to Discord Servers...");
             client = new DiscordClient(input =>
             {
-                input.LogLevel = LogSeverity.Info;
+                input.LogLevel = LogSeverity.Verbose;
                 input.LogHandler = Log;
             });
 
@@ -36,7 +37,7 @@ namespace PineappleBot
             {
                 try
                 {
-                    await client.Connect("INSERT BOT TOKEN HERE", TokenType.Bot);
+                    await client.Connect("MzI2NjQ0ODg5MzE0MDAwODk3.DCpzXw.k2LsiBtOHTg419T0Z1qnf8UXWTA", TokenType.Bot);
                 }
                 catch (Discord.Net.HttpException e)
                 {
